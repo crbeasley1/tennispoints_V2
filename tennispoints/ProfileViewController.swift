@@ -10,15 +10,29 @@ import Foundation
 import Firebase
 import FirebaseAuth
 import UIKit
+import CoreLocation
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, CLLocationManagerDelegate {
+    
+    var locationManager: CLLocationManager!
+    
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+
+    override func viewWillAppear(_ animated: Bool) {
+        
+      
     }
+    
 
-
-   
+    @IBAction func signOut(_ sender: Any) {
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+        self.performSegue(withIdentifier: "goToLogin", sender: nil)
+    }
 
 
 

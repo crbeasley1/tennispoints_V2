@@ -16,8 +16,10 @@
 		4509E6732013B7D7001113CE /* tennispointsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4509E6722013B7D7001113CE /* tennispointsUITests.swift */; };
 		4509E6812013BB16001113CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4509E6802013BB16001113CE /* GoogleService-Info.plist */; };
 		4534805C2015A35D00BA3C24 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4534805B2015A35D00BA3C24 /* ProfileViewController.swift */; };
+		4535165D205EF9E5009D2F20 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4535165C205EF9E5009D2F20 /* Location.swift */; };
 		454F7645201FEADF0029CF7E /* SetCourtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454F7644201FEADF0029CF7E /* SetCourtViewController.swift */; };
 		454F7647201FEB050029CF7E /* RecordPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454F7646201FEB050029CF7E /* RecordPlayViewController.swift */; };
+		455E743C206ACA06007A4426 /* CourtPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455E743B206ACA06007A4426 /* CourtPin.swift */; };
 		4568BCA92016B7F800713B51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4568BCA72016B7F800713B51 /* Main.storyboard */; };
 		BBFCCDF6B311A891D23049DB /* Pods_tennispointsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDCAFAD5599B27A6782FB40C /* Pods_tennispointsUITests.framework */; };
 		EFB4B14CD7E98ADA08531960 /* Pods_tennispoints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20152DC871B57A4DBF2936A3 /* Pods_tennispoints.framework */; };
@@ -59,8 +61,10 @@
 		4509E6742013B7D7001113CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4509E6802013BB16001113CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4534805B2015A35D00BA3C24 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4535165C205EF9E5009D2F20 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		454F7644201FEADF0029CF7E /* SetCourtViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetCourtViewController.swift; sourceTree = "<group>"; };
 		454F7646201FEB050029CF7E /* RecordPlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordPlayViewController.swift; sourceTree = "<group>"; };
+		455E743B206ACA06007A4426 /* CourtPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CourtPin.swift; path = ../CourtPin.swift; sourceTree = "<group>"; };
 		4568BCA82016B7F800713B51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		89A2DE283EF336213E91DC6D /* Pods-tennispointsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tennispointsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-tennispointsTests/Pods-tennispointsTests.release.xcconfig"; sourceTree = "<group>"; };
 		A7EBF2AA41B02009FF7956BF /* Pods-tennispointsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tennispointsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-tennispointsUITests/Pods-tennispointsUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -122,7 +126,9 @@
 		4509E6512013B7D7001113CE /* tennispoints */ = {
 			isa = PBXGroup;
 			children = (
+				455E743B206ACA06007A4426 /* CourtPin.swift */,
 				4509E6522013B7D7001113CE /* AppDelegate.swift */,
+				4535165C205EF9E5009D2F20 /* Location.swift */,
 				4509E6542013B7D7001113CE /* LoginViewController.swift */,
 				4534805B2015A35D00BA3C24 /* ProfileViewController.swift */,
 				4568BCA72016B7F800713B51 /* Main.storyboard */,
@@ -480,10 +486,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				455E743C206ACA06007A4426 /* CourtPin.swift in Sources */,
 				4509E6552013B7D7001113CE /* LoginViewController.swift in Sources */,
 				4509E6532013B7D7001113CE /* AppDelegate.swift in Sources */,
 				4534805C2015A35D00BA3C24 /* ProfileViewController.swift in Sources */,
 				454F7647201FEB050029CF7E /* RecordPlayViewController.swift in Sources */,
+				4535165D205EF9E5009D2F20 /* Location.swift in Sources */,
 				454F7645201FEADF0029CF7E /* SetCourtViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
