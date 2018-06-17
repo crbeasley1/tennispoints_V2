@@ -14,11 +14,16 @@ import CoreLocation
 
 class ProfileViewController: UIViewController, CLLocationManagerDelegate {
     
-    var locationManager: CLLocationManager!
+    //mark properties and outlets
+    
+    
+    
+    @IBOutlet weak var tennisPointsDisplay: UILabel!
     
 
-
     override func viewWillAppear(_ animated: Bool) {
+        
+        tennisPointsDisplay.text = ("100")
         
       
     }
