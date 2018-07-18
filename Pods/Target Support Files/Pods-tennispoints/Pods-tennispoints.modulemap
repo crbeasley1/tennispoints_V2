@@ -1,0 +1,6 @@
+framework module Pods_tennispoints {
+  umbrella header "Pods-tennispoints-umbrella.h"
+
+  export *
+  module * { export * }
+}
