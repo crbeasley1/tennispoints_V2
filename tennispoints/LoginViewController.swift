@@ -42,7 +42,15 @@ class LoginViewController: UIViewController {
                 else {
                     Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
                         if error != nil {
-                            print("Can't sign in User")
+                            let alert = UIAlertController(title: "Oh No!", message: "Are you sure you have the right username/password?", preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                                NSLog("The \"OK\" alert occured.")
+                            }))
+                            self.present(alert, animated: true, completion: nil)
+                            
+                            
+                            print("Wrong Username/Password")
+                            
                         }
                         else {
                             //perform segue

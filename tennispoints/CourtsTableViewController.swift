@@ -19,18 +19,18 @@ class CourtsTableViewController: UITableViewController {
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.delegate = self
         tableView.dataSource = self
-        var window: UIWindow?
-        window = UIWindow()
-        window?.makeKeyAndVisible()
-        let NavController = UINavigationController(rootViewController: CourtsTableViewController())
-        window?.rootViewController = NavController
-        navigationItem.title = "Courts"
-        if #available(iOS 11.0, *) {
-            navigationController?.navigationBar.prefersLargeTitles = true
-        } else {
-            // Fallback on earlier versions
-            
-        }
+//        var window: UIWindow?
+//        window = UIWindow()
+//        window?.makeKeyAndVisible()
+//        let NavController = UINavigationController(rootViewController: CourtsTableViewController())
+//        window?.rootViewController = NavController
+//        navigationItem.title = "Courts"
+//        if #available(iOS 11.0, *) {
+//            navigationController?.navigationBar.prefersLargeTitles = true
+//        } else {
+//            // Fallback on earlier versions
+//            
+//        }
         
     }
     

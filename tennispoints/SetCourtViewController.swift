@@ -21,32 +21,27 @@ class SetCourtViewController: UIViewController, CLLocationManagerDelegate, MKMap
     
     @IBOutlet weak var mapView: MKMapView!
     
-    // MARK: LIFE CYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    }
-        
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    
-        determineMyCurrentLocation()
-    
-    }
-    
-     func determineMyCurrentLocation() {
-        locationManager = CLLocationManager()
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         
         if CLLocationManager.locationServicesEnabled() {
+            locationManager = CLLocationManager()
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
-        }
-    
-    
-    
     }
+        mapView.delegate = self
+        mapView.mapType = .standard
+        mapView.isZoomEnabled = true
+        mapView.isScrollEnabled = true
+        
+        if let coor = mapView.userLocation.location?.coordinate{
+            mapView.setCenter(coor, animated: true)
+        }
+        
+        
+}
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
@@ -54,6 +49,20 @@ class SetCourtViewController: UIViewController, CLLocationManagerDelegate, MKMap
         
         // Call stopUpdatingLocation() to stop listening for location updates,
         // other wise this function will be called every time when user location changes.
+        
+        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
+        
+        mapView.mapType = MKMapType.standard
+        
+        let span = MKCoordinateSpanMake(0.01, 0.01)
+        let region = MKCoordinateRegion(center: locValue, span: span)
+        mapView.setRegion(region, animated: true)
+        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = locValue
+        annotation.title = "Court"
+        annotation.subtitle = "current location"
+        mapView.addAnnotation(annotation)
         
         manager.stopUpdatingLocation()
         
@@ -66,10 +75,8 @@ class SetCourtViewController: UIViewController, CLLocationManagerDelegate, MKMap
     
    
     @IBAction func setCourt(_ sender: Any) {
+        Database.database().reference().child(Auth.auth().currentUser!.uid).child("textField?.text").setValue(["Latitude": self.locationManager.location!.coordinate.latitude, "Longitude": self.locationManager.location!.coordinate.longitude])
         
-    
-        
-            Database.database().reference().child(Auth.auth().currentUser!.uid).child("textField?.text").setValue(["Latitude": self.locationManager.location!.coordinate.latitude, "Longitude": self.locationManager.location!.coordinate.longitude])
         
     }
 }

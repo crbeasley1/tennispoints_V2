@@ -58,7 +58,7 @@
             </objects>
             <point key="canvasLocation" x="4485.6000000000004" y="124.58770614692655"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Profile-->
         <scene sceneID="2nw-RK-lJp">
             <objects>
                 <viewController id="RsM-ht-IF8" customClass="ProfileViewController" customModule="tennispoints" customModuleProvider="target" sceneMemberID="viewController">
@@ -70,79 +70,74 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SGc-ke-5k6">
+                                <rect key="frame" x="0.0" y="687" width="414" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="I2X-tG-qX6"/>
+                                    <tabBarItem systemItem="more" id="Fh9-5U-9wC"/>
+                                </items>
+                            </tabBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fC-E9-7zP">
-                                <rect key="frame" x="48" y="486" width="88" height="21"/>
+                                <rect key="frame" x="181" y="405" width="64" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Ellipse 1" translatesAutoresizingMaskIntoConstraints="NO" id="jkI-4H-oFA">
-                                <rect key="frame" x="127" y="146" width="105" height="108"/>
+                                <rect key="frame" x="155" y="252" width="105" height="108"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epn-R1-ALe">
-                                <rect key="frame" x="290" y="479" width="42" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxN-5x-L7j">
-                                <rect key="frame" x="136" y="91" width="78" height="31"/>
+                                <rect key="frame" x="167" y="181" width="78" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHP-Iz-U9a">
-                                <rect key="frame" x="48" y="584" width="48" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epn-R1-ALe">
+                                <rect key="frame" x="181" y="470" width="64" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Courts"/>
-                                <connections>
-                                    <segue destination="IRd-TK-Pj5" kind="show" id="Pqn-G6-d26"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFq-JI-VCH">
-                                <rect key="frame" x="124" y="318" width="103" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Play Tennis!"/>
-                                <connections>
-                                    <segue destination="J1p-z2-aAz" kind="show" id="eQB-PH-zSn"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xiy-TE-aXP">
-                                <rect key="frame" x="29" y="534" width="127" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="add a court">
-                                    <color key="titleColor" red="0.48746318719999998" green="0.48746318719999998" blue="0.48746318719999998" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="nem-ac-o7b" kind="show" id="fUa-SZ-3br"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Profile" id="wOu-hL-sxT"/>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="sUg-td-X5M">
                         <barButtonItem key="rightBarButtonItem" title="Sign Out" id="4ik-GK-zev">
+                            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="signOut:" destination="RsM-ht-IF8" id="JTb-wZ-ts7"/>
                                 <segue destination="oPm-Qt-uun" kind="presentation" identifier="goToLogin" id="fu7-Pm-9LR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tennisPointsDisplay" destination="epn-R1-ALe" id="Iox-DI-YmV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ulm-Pm-QHt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6305" y="125"/>
+            <point key="canvasLocation" x="7139" y="124"/>
         </scene>
-        <!--Set Court View Controller-->
+        <!--Gear-->
+        <scene sceneID="I7c-as-HZW">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="Kcu-dO-6nn" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Gear" id="HPp-39-TAW"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Za-XU-Jx9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7999" y="128"/>
+        </scene>
+        <!--Set Court-->
         <scene sceneID="qxf-dI-EJ1">
             <objects>
                 <viewController id="nem-ac-o7b" customClass="SetCourtViewController" customModule="tennispoints" sceneMemberID="viewController">
@@ -154,25 +149,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Gei-0N-pPC">
-                                <rect key="frame" x="36" y="231" width="343" height="372"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </mapView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Ellipse 1" translatesAutoresizingMaskIntoConstraints="NO" id="pf1-NH-qcr">
-                                <rect key="frame" x="155" y="97" width="105" height="108"/>
+                                <rect key="frame" x="155" y="124" width="105" height="108"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CtW-bQ-vC3">
-                                <rect key="frame" x="159" y="136" width="97" height="30"/>
+                                <rect key="frame" x="159" y="163" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Set Court"/>
+                                <state key="normal" title="Add Court"/>
                                 <connections>
                                     <action selector="setCourt:" destination="nem-ac-o7b" eventType="touchUpInside" id="qZv-ib-aaC"/>
                                 </connections>
                             </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Gei-0N-pPC">
+                                <rect key="frame" x="36" y="277" width="343" height="372"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Set Court" id="llV-wr-SK8"/>
                     <navigationItem key="navigationItem" id="5fk-yK-9Me">
                         <barButtonItem key="backBarButtonItem" title="Item" id="Pv7-ja-hBO"/>
                     </navigationItem>
@@ -183,9 +179,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g2o-gc-Zug" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7472.8000000000002" y="124.58770614692655"/>
+            <point key="canvasLocation" x="7212" y="-735"/>
         </scene>
-        <!--Courts Table View Controller-->
+        <!--Courts-->
         <scene sceneID="3Ze-d2-Qb7">
             <objects>
                 <tableViewController id="IRd-TK-Pj5" customClass="CourtsTableViewController" customModule="tennispoints" customModuleProvider="target" sceneMemberID="viewController">
@@ -231,15 +227,16 @@
                             <outlet property="delegate" destination="IRd-TK-Pj5" id="T6P-Q7-rlL"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Courts" id="ANJ-Nv-DdL"/>
                     <connections>
                         <outlet property="courtsTableView" destination="SrK-MD-ZBs" id="hG1-Qe-Mt4"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sAC-3O-amE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7000" y="1000"/>
+            <point key="canvasLocation" x="7212" y="978"/>
         </scene>
-        <!--Record Play View Controller-->
+        <!--Record Play-->
         <scene sceneID="JfG-RO-fAr">
             <objects>
                 <viewController id="J1p-z2-aAz" customClass="RecordPlayViewController" customModule="tennispoints" sceneMemberID="viewController">
@@ -251,40 +248,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Ellipse 1" translatesAutoresizingMaskIntoConstraints="NO" id="Wby-a9-7tS">
-                                <rect key="frame" x="148" y="356" width="79" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGo-lG-OGg">
-                                <rect key="frame" x="164" y="378" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Stop"/>
-                                <connections>
-                                    <action selector="stopButton:" destination="J1p-z2-aAz" eventType="touchUpInside" id="oaZ-Bf-xWY"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Ellipse 1" highlightedImage="Ellipse 1" translatesAutoresizingMaskIntoConstraints="NO" id="PzM-Qu-feA">
-                                <rect key="frame" x="130" y="165" width="115" height="107"/>
+                                <rect key="frame" x="150" y="315" width="115" height="107"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dr-sO-7kr">
-                                <rect key="frame" x="148" y="203" width="79" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5v-67-TB6">
+                                <rect key="frame" x="150" y="353" width="115" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Record"/>
                                 <connections>
-                                    <action selector="recordPlay:" destination="J1p-z2-aAz" eventType="touchUpInside" id="D4Q-EP-6dh"/>
+                                    <action selector="recordPlay:" destination="J1p-z2-aAz" eventType="touchUpInside" id="ZuE-F5-lU9"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Record Play" id="MNv-sL-svF"/>
                     <navigationItem key="navigationItem" id="4Vc-di-bg3">
                         <barButtonItem key="backBarButtonItem" title="Back" id="69o-EV-eeg"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="button" destination="g5v-67-TB6" id="yWX-5X-zu9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xZk-TY-njC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6236" y="872"/>
+            <point key="canvasLocation" x="7211.594202898551" y="1783.6956521739132"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1DL-wS-v45">
@@ -315,12 +304,35 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="RsM-ht-IF8" kind="relationship" relationship="rootViewController" id="9Rb-zh-cH1"/>
+                        <segue destination="8eM-rJ-GvI" kind="relationship" relationship="rootViewController" id="9Rb-zh-cH1"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aSG-ys-69N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5317.6000000000004" y="124.58770614692655"/>
+        </scene>
+        <!--Gear-->
+        <scene sceneID="KXC-ju-4OE">
+            <objects>
+                <tabBarController title="Gear" automaticallyAdjustsScrollViewInsets="NO" id="8eM-rJ-GvI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="bRD-20-RkD"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZJA-Rl-imF">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="RsM-ht-IF8" kind="relationship" relationship="viewControllers" id="7EV-OD-GIO"/>
+                        <segue destination="nem-ac-o7b" kind="relationship" relationship="viewControllers" id="t85-Hc-5KH"/>
+                        <segue destination="J1p-z2-aAz" kind="relationship" relationship="viewControllers" id="lHf-Ub-5bj"/>
+                        <segue destination="IRd-TK-Pj5" kind="relationship" relationship="viewControllers" id="gQL-T9-b6E"/>
+                        <segue destination="Kcu-dO-6nn" kind="relationship" relationship="viewControllers" id="ax9-eg-9Vi"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xVD-QE-3Wv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6304.347826086957" y="124.72826086956523"/>
         </scene>
     </scenes>
     <resources>
