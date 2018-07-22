@@ -75,8 +75,33 @@ class SetCourtViewController: UIViewController, CLLocationManagerDelegate, MKMap
     
    
     @IBAction func setCourt(_ sender: Any) {
-        Database.database().reference().child(Auth.auth().currentUser!.uid).child("textField?.text").setValue(["Latitude": self.locationManager.location!.coordinate.latitude, "Longitude": self.locationManager.location!.coordinate.longitude])
+        
+        let alert = UIAlertController(title: "Court Name", message: "Enter your court Name", preferredStyle: .alert)
+        alert.addTextField { (textField) in
+        }
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
+            let textField = alert?.textFields![0]
+            // Force unwrapping because we know it exists.
+            print("Text field: \(String(describing: textField?.text))")
+        
+            Database.database().reference().child(Auth.auth().currentUser!.uid).child((textField?.text)!).setValue(["Latitude": self.locationManager.location!.coordinate.latitude, "Longitude": self.locationManager.location!.coordinate.longitude])
+            
+
+        }
+
+        )
+        
+        )
+        
+        self.present(alert, animated: true, completion: nil)
+
+    }
+        
+    
+        
+        
+        
         
         
     }
-}
+

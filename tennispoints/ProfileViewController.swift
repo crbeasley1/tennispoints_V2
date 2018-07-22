@@ -18,15 +18,17 @@ class ProfileViewController: UIViewController, CLLocationManagerDelegate {
     
     
     
-    @IBOutlet weak var tennisPointsDisplay: UILabel!
+    @IBOutlet weak var textLabel: UILabel!
     
 
     override func viewWillAppear(_ animated: Bool) {
         
-        tennisPointsDisplay.text = ("100")
+        textLabel.text = ("100")
         
-      
     }
+    
+ 
+    
     
 
     @IBAction func signOut(_ sender: Any) {

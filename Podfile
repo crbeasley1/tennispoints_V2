@@ -15,6 +15,11 @@ target 'tennispoints' do
   target 'tennispointsTests' do
     inherit! :complete
     # Pods for testing
+
+    pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+  
   end
 
   target 'tennispointsUITests' do
